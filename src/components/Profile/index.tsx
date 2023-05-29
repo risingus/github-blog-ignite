@@ -4,46 +4,54 @@ import styles from './styles.module.scss'
 import { faBuilding } from '@fortawesome/free-regular-svg-icons'
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
+import { ExternalLink } from '../Link'
+
+interface ProfileProps {
+  avatar: string
+  name: string
+  bio: string
+  login: string
+  company: string
+  followers: number
+  url: string
+}
 
 
-
-export function Profile() {
+export function Profile({ avatar, name, bio, login, company, followers, url }: ProfileProps) {
 
   return (
     <section className={styles.profileContainer}>
-      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80" alt="" />
+      <img src={avatar} alt="" />
 
       <div className={styles.bioContainer}>
         <div className={styles.bioHeader}>
-          <h1>Fernanda Torres</h1>
-          <a href="">
+          <h1>{name}</h1>
+          <ExternalLink to={url}>
             <p>
               github
             </p>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-          </a>
+          </ExternalLink>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          Aenean consectetur sapien quam, vel fringilla lorem posuere vel.
-          Phasellus vitae sodales risus. Cras molestie tortor at nisl sollicitudin
+          {bio}
         </p>
 
         <div className={styles.infoContainer}>
           <div className={styles.info}>
             <FontAwesomeIcon icon={faGithub} />
-            <p>@ftorres</p>
+            <p>{login}</p>
           </div>
 
           <div className={styles.info}>
             <FontAwesomeIcon icon={faBuilding} />
-            <p>rocketSeat</p>
+            <p>{company}</p>
           </div>
 
           <div className={styles.info}>
             <FontAwesomeIcon icon={faUserGroup} />
             <p>
-              30 seguidores
+              {followers} seguidores
             </p>
           </div>
         </div>

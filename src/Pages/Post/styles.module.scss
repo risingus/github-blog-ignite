@@ -3,4 +3,139 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 2.5rem;
+  width: 54rem;
+    border-radius: 10px;
+    background-color: var(--base-profile);
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.2);
+  
+    .postHeaderContainer {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  
+      .postLinksContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        flex: 1;
+  
+        >a {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          color: var(--blue);
+          font-family: Nunito;
+          font-weight: 700;
+          font-size: 0.75rem;
+          line-height: 160%;
+          text-transform: uppercase;
+          border-bottom-color: transparent;
+          border-bottom-width: 1px;
+          border-bottom-style: solid;
+          transition: border-color 0.2s ease-in-out;
+  
+          &:hover {
+            border-color: var(--blue);
+          }
+        }
+      }
+  
+      >h1 {
+        font-family: Nunito;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 130%;
+        color: var(--base-title);
+        margin: 1.25rem 0 0.5rem 0;
+      }
+  
+      .postInfoContainer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2rem;
+  
+        .postInfo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 0.5rem;
+  
+          >svg {
+            font-size: 1.125rem;
+            color: var(--base-label);
+          }
+  
+          >p {
+            font-family: Nunito;
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 160%;
+            color: var(--base-span);
+  
+          }
+        }
+      }
+    }
+  
+    .mainContent {
+      font-family: Nunito;
+      color: var(--base-text);
+      line-height: 160%;
+      font-size: 1rem;
+      max-width: 50rem;
+  
+      p {
+        margin-bottom: 1rem;
+  
+        &:first-of-type {
+          font-weight: 700;
+        }
+      }
+  
+      a {
+        color: var(--blue);
+        text-decoration: none;
+        border-bottom-color: transparent;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        transition: border-color 0.2s ease-in-out;
+  
+        &:hover {
+          border-color: var(--blue);
+        }
+      }
+  
+      pre {
+        overflow-x: scroll;
+      }
+  
+      pre:has(code) {
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 2px;
+        background-color: var(--base-post);
+      }
+  
+      img {
+        width: 100%;
+        padding: 1rem 0;
+      }
+  
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        margin: 1rem 0;
+      }
+    }
 }

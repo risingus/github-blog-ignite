@@ -1,5 +1,4 @@
 .homeContainer {
-  margin-bottom: 14.625rem;
 
   .searchPostsContainer {
     display: flex;
@@ -51,6 +50,9 @@
       color: var(--base-text);
       transition: border-color 0.2s ease-in-out;
 
+      &:disabled {
+          opacity: 0.5;
+        }
 
       &::placeholder {
         color: var(--base-label);

@@ -3,8 +3,6 @@ import { Home } from './Pages/Home';
 import { DefaultLayout } from './Layouts/DefaultLayout';
 import { Post } from './Pages/Post';
 
-
-
 export function Router() {
   return (
     <Routes>

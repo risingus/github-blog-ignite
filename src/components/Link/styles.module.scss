@@ -1,0 +1,27 @@
+.links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  border-bottom-color: transparent;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  transition: border-color 0.2s ease-in-out;
+
+  color: var(--blue);
+  font-family: Nunito;
+  font-weight: 700;
+  line-height: 160%;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+
+  &:hover {
+    border-color: var(--blue);
+  }
+
+  svg {
+    font-size: 0.703rem;
+  }
+}

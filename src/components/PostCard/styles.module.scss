@@ -48,6 +48,9 @@
       font-weight: 400;
       color: var(--base-span);
       text-align: right;
+&::first-letter {
+    text-transform: capitalize;
+  }
     }
   }
 
@@ -61,6 +64,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 4;
     overflow: hidden;
+    max-width: 22rem;
 
   }
 
