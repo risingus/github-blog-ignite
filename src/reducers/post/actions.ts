@@ -13,6 +13,14 @@ interface PostDataProps {
 	created_at: string
 	comments: number
 	body: string
+	html_url: string
+}
+
+export interface PostActions {
+	type: ActionTypes.SET_POST_DATA
+	payload: {
+		value: PostDataProps
+	}
 }
 
 export function setPostData(post: PostDataProps) {

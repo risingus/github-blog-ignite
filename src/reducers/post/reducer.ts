@@ -1,5 +1,5 @@
 import { formatDateToNow, formatNumber, formatString } from '../../utils/functions'
-import { ActionTypes } from './actions'
+import { ActionTypes, PostActions } from './actions'
 
 
 interface PostReducerInitial {
@@ -8,9 +8,10 @@ interface PostReducerInitial {
 	createdAt: string
 	comments: number,
 	body: string
+	url: string
 }
 
-export const postReducer = (state: PostReducerInitial, action: any) => {
+export const postReducer = (state: PostReducerInitial, action: PostActions) => {
 	switch (action.type) {
 		case ActionTypes.SET_POST_DATA: {
 			return {
@@ -19,7 +20,8 @@ export const postReducer = (state: PostReducerInitial, action: any) => {
 				login: formatString(action?.payload?.value?.user?.login),
 				createdAt: formatDateToNow(action?.payload?.value?.['created_at']),
 				comments: formatNumber(action?.payload?.value?.comments),
-				body: action?.payload?.value?.body || ''
+				body: action?.payload?.value?.body || '',
+				url: formatString(action?.payload?.value?.['html_url'])
 			}
 		}
 

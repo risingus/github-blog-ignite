@@ -16,7 +16,8 @@ export function usePost() {
       login: '',
       createdAt: '',
       comments: 0,
-      body: ''
+      body: '',
+      url: '',
     }
   )
 

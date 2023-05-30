@@ -1,56 +1,51 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import ReactMarkdown from 'react-markdown'
-import { Link } from 'react-router-dom'
 import { faArrowUpRightFromSquare, faCalendarDay, faChevronLeft, faComment } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import styles from './styles.module.scss'
 import { usePost } from '../../hooks/usePost'
+import { ExternalLink, LinkNav } from '../../components/Link'
+import { Info } from '../../components/Info'
 
 export function Post() {
-  const { title, login, createdAt, comments, body } = usePost();
+  const { title, login, createdAt, comments, body, url } = usePost();
 
   return (
     <div className={styles.postContainer}>
 
       <section className={styles.postHeaderContainer}>
         <div className={styles.postLinksContainer}>
-          <Link to="/">
+          <LinkNav to="/">
             <FontAwesomeIcon icon={faChevronLeft} />
             voltar
-          </Link>
+          </LinkNav>
 
-          <Link to="">
+          <ExternalLink to={url}>
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             ver no github
-          </Link>
+          </ExternalLink>
         </div>
         <h1>
           {title}
         </h1>
 
         <div className={styles.postInfoContainer}>
-          <div className={styles.postInfo}>
+          <Info>
             <FontAwesomeIcon icon={faGithub} />
-            <p>
               {login}
-            </p>
-          </div>
+          </Info>
 
-          <div className={styles.postInfo}>
+          <Info>
             <FontAwesomeIcon icon={faCalendarDay} />
-            <p>
               {createdAt}
-            </p>
-          </div>
+          </Info>
 
-          <div className={styles.postInfo}>
+          <Info>
             <FontAwesomeIcon icon={faComment} />
-            <p>
               {
-                comments > 1 ? `${comments} comentários` : `${comments} comentário`
+              comments > 1 || comments === 0 ? `${comments} comentários` : `${comments} comentário`
               }
-            </p>
-          </div>
+          </Info>
         </div>
       </section>
 

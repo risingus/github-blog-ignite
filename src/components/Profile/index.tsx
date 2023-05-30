@@ -5,6 +5,7 @@ import { faBuilding } from '@fortawesome/free-regular-svg-icons'
 import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { ExternalLink } from '../Link'
+import { Info } from '../Info'
 
 interface ProfileProps {
   avatar: string
@@ -15,7 +16,6 @@ interface ProfileProps {
   followers: number
   url: string
 }
-
 
 export function Profile({ avatar, name, bio, login, company, followers, url }: ProfileProps) {
 
@@ -38,24 +38,22 @@ export function Profile({ avatar, name, bio, login, company, followers, url }: P
         </p>
 
         <div className={styles.infoContainer}>
-          <div className={styles.info}>
+          <Info>
             <FontAwesomeIcon icon={faGithub} />
-            <p>{login}</p>
-          </div>
+            {login}
+          </Info>
 
-          <div className={styles.info}>
+          <Info>
             <FontAwesomeIcon icon={faBuilding} />
-            <p>{company}</p>
-          </div>
+            {company}
+          </Info>
 
-          <div className={styles.info}>
+          <Info>
             <FontAwesomeIcon icon={faUserGroup} />
-            <p>
               {followers} seguidores
-            </p>
-          </div>
+          </Info>
         </div>
-      </div>
+      </div> 
 
     </section>
   )

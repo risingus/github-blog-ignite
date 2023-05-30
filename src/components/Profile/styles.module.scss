@@ -18,8 +18,9 @@
     object-position: center;
     border-radius: 8px;
     background-color: var(--base-label);
-      border: none;
+    border: none;
   }
+
 
   .bioContainer {
     display: flex;
@@ -44,39 +45,6 @@
         font-size: 1.5rem;
       }
 
-                                                                                                // >a {
-                                                                                                //   display: flex;
-                                                                                                //   flex-direction: row;
-                                                                                                //   flex-wrap: nowrap;
-                                                                                                //   align-items: center;
-                                                                                                //   gap: 0.5rem;
-                                                                                                //   text-decoration: none;
-                                                                                                //   border-bottom-color: transparent;
-                                                                                                //   border-bottom-width: 1px;
-                                                                                                //   border-bottom-style: solid;
-                                                                                                //   transition: border-color 0.2s ease-in-out;
-
-      //   &:hover {
-        //     border-color: var(--blue);
-        //   }
-
-                                                                                                //   >p,
-                                                                                                //   svg {
-                                                                                                //     color: var(--blue);
-                                                                                                //   }
-
-                                                                                                //   >p {
-                                                                                                //     font-family: Nunito;
-                                                                                                //     font-weight: 700;
-                                                                                                //     line-height: 160%;
-                                                                                                //     font-size: 0.75rem;
-                                                                                                //     text-transform: uppercase;
-                                                                                                //   }
-
-                                                                                                //   >svg {
-                                                                                                //     font-size: 0.703rem;
-                                                                                                //   }
-                                                                                                // }
     }
 
         >p {
